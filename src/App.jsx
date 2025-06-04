@@ -1,11 +1,10 @@
-import "./Components/ShortCircuit/ShortCircuit.css";
-import { ShortCircuitExample } from "./Components/ShortCircuit/ShortCircuit"
 
+import { CleanUp } from "./Components/hooks/useEffect/CleanUp";
 
 export const App = () =>{
   return (
     <section className="wrapper">
-      <ShortCircuitExample/>
+      <CleanUp/>
     </section>
   )
 }
