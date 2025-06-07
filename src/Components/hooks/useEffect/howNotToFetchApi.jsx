@@ -12,7 +12,10 @@ export const HowNotToFetchApi = () =>{
                 {
                     apiData.map((currentElement)=>{
                         return(
-                            <li key={currentElement.id}>{currentElement.title}</li>
+                            <li key={currentElement.id}>
+                                <h1>{currentElement.title}</h1>
+                                <p>{currentElement.body}</p>
+                                </li>
                         )
                     })
                 }
