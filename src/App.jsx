@@ -1,9 +1,9 @@
-import { HowNotToFetchApi } from "./Components/hooks/useEffect/howNotToFetchApi";
+import { UseRef } from "./Components/hooks/useRaf/useRaf"
 
 export const App = () =>{
   return (
     <section className="wrapper">
-      <HowNotToFetchApi/>
+      <UseRef/>
     </section>
   )
 }
