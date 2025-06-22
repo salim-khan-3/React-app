@@ -1,9 +1,9 @@
-import { UseRef } from "./Components/hooks/useRaf/useRaf"
+import { ForwardRefs } from "./Components/hooks/useRaf/forwordRef"
 
 export const App = () =>{
   return (
     <section className="wrapper">
-      <UseRef/>
+      <ForwardRefs/>
     </section>
   )
 }
