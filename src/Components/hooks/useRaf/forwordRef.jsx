@@ -1,14 +1,15 @@
-import { useId, useRef } from "react";
+import { forwardRef, useId, useRef } from "react";
 import { UseRef } from "./useRaf"
 
 export const ForwardRefs = () =>{
 
-    const username = UseRef(null);
+    const username = useRef(null);
     const password = useRef(null);
 
     const handleFormSubmit = (e) =>{
         e.preventDefault();
         console.log(username.current.value);
+        console.log(password.current.value);
     }
     return (
         <form onSubmit={handleFormSubmit}>
@@ -19,11 +20,11 @@ export const ForwardRefs = () =>{
     )
 }
 
-const BeforeReact19Input = ((props,ref)=>{
+const BeforeReact19Input =forwardRef((Props,ref)=>{
     const id = useId();
     return(
         <div>
-            <label htmlFor={id}>{props.label}</label>
+            <label htmlFor={id}>{Props.label}</label>
             <input type="text" ref={ref}/>
         </div>
     )
