@@ -8,8 +8,8 @@ export const ForwardRefs = () =>{
 
     const handleFormSubmit = (e) =>{
         e.preventDefault();
-        console.log(username.current.value);
-        console.log(password.current.value);
+        console.log(`username: ${username.current.value}`);
+        console.log(`password: ${password.current.value}`);
     }
     return (
         <form onSubmit={handleFormSubmit}>
@@ -20,12 +20,27 @@ export const ForwardRefs = () =>{
     )
 }
 
-const BeforeReact19Input =forwardRef((Props,ref)=>{
+
+// before version 19 
+// const BeforeReact19Input =forwardRef((Props,ref)=>{
+//     const id = useId();
+//     return(
+//         <div>
+//             <label htmlFor={id}>{Props.label}</label>
+//             <input type="text" ref={ref}/>
+//         </div>
+//     )
+// })
+
+// after version 19
+const BeforeReact19Input =(Props)=>{
     const id = useId();
     return(
         <div>
             <label htmlFor={id}>{Props.label}</label>
-            <input type="text" ref={ref}/>
+            <input type="text" ref={Props.ref}/>
         </div>
     )
-})
+}
+
+
