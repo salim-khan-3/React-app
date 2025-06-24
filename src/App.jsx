@@ -1,10 +1,14 @@
-import { UseId } from "./Components/hooks/useId/useId"
+import { BioProvider } from "./Components/hooks/ContextApi"
+import { About } from "./Components/hooks/ContextApi/About"
+import { Home } from "./Components/hooks/ContextApi/Home"
+
 
 
 export const App = () =>{
   return (
-    <section className="wrapper">
-      <UseId/>
-    </section>
+    <BioProvider>
+      <Home/>
+      <About/>
+    </BioProvider>
   )
 }
